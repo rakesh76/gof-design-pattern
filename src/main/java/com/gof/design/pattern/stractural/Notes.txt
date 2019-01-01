@@ -1,0 +1,3 @@
+structural patterns – A set of patterns whose objective is to identify how to realize relationships between classes
+and objects in a simple way. This pattern is typically used when an incompatible module needs to be integrated with an
+existing module without making any source code modifications.

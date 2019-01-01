@@ -1,0 +1,22 @@
+Adapter Design Pattern :-
+
+
+We use adapters in our daily lives. The moment you plugin your mobile handset or your laptop to a socket for charging,
+an adapter is at work. What the adapter does is makes the socket that produces 120 V (or 220 V for European standard)
+and the mobile device that requires 4 V work together. Similarly, by using the adapter pattern in the programming world,
+you can make incompatible interfaces work together.
+
+We can summarize the participants of the adapter pattern in the context of the text formatting example, as:
+
+Target (TextFormattable): The existing interface that clients communicate with.
+Adaptee (CsvFormattable): The new incompatible interface that needs adapting.
+Adapter (CsvAdapterImpl): A class that adapts the Adaptee to the Target.
+Client: Communicates with the Targets.
+
+
+Java API Usage :-
+
+1)BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+BufferReader can't take directly input from command prompt, it required adatper class as InputStreamReader. BufferReader expect only Character Stream
+
+2) Arrays.asList(L)

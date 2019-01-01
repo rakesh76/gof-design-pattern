@@ -1,0 +1,34 @@
+
+Builder Pattern:-
+
+Builder pattern aims to �Separate the construction of a complex object from its representation
+so that the same construction process can create different representations.�
+
+Take an example of User object where it has 5 attributes, FirstName, LastName, Age, Phone , Address
+
+1) if you make FirstName and LastName as Mandatory and remaining 3 attributes as optional, you need to create
+   multiple constructor to create that object.
+
+2) If you add any new attributes, you need to create more constructor.
+
+3) adding more constructor parameters results in code that becomes harder to read . If we had 10 different parameters,
+   it would become very difficult to identify what's what in the constructor at a single glance.
+   To make it worse, some of those values might be optional, which means that we'll need to create a bunch of
+   overloaded constructors to deal with all possible combinations, or we'll have to pass nulls to our constructor
+
+4) where we need Builder Pattern
+
+   to create a Immutable object . Once object is created and you don't want to change object state, you can use
+   builder pattern to create complex and immutable object.
+
+5) Builder pattern solve 2 problems..
+   1) Too many constructor arguments.
+  2) Incorrect object state.
+
+
+
+Use in Java API :-
+StringBuilder
+Instream.builder
+LongStream.builder
+DoubleStream.builder

@@ -1,0 +1,22 @@
+
+Builder Pattern:-
+
+Builder Pattern used to create complex objects.
+
+The builder pattern allows you to enforce a step-by-step process to construct a complex object as a finished product. In this pattern,
+the step-by-step construction process remains same but the finished products can have different representations.
+In the context of the house building example, the step-by-step process includes the steps to create the foundation, structure, and roof
+followed by the steps to paint and furnish a house and these steps remain the same irrespective of the type of house to build.
+The finished product, which is a house, can have different representations. That is, it can be a concrete house, a prefabricated house, or a tree house.
+
+
+Product (House): A class that represents the product to create.
+Builder (HouseBuilder): Is an interface to build the parts of a product.
+ConcreteBuilder(ConcreteHouseBuilder and PrefabricatedHouseBuilder): Are concrete classes that implement Builder to construct and assemble parts of the product and return the finished product.
+Director (ConstructionEngineer): A class that directs a builder to perform the steps in the order that is required to build the product.
+
+Use in Java API :-
+StringBuilder
+Instream.builder
+LongStream.builder
+DoubleStream.builder

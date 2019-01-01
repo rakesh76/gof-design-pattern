@@ -1,0 +1,26 @@
+Bridge Pattern
+
+Decouples an abstraction so two classes can vary independently.
+
+We use abstraction to decouple client code from implementations, and the usual way is to use inheritance. We define an interface or an abstract class
+and create inheritance hierarchies from it, one for each of the several possible implementations. Although at first look this approach appears logical
+and nothing wrong in it, abstractions through inheritance isn’t always flexible. When we use inheritance, we are permanently binding the implementation
+to the abstraction. As a result, any change made to one affects the other. A more flexible way is to separate the abstraction and the implementation,
+and this is where the bridge pattern comes in.
+
+The bridge pattern does it by separating the abstraction and the implementation in separate class hierarchies. The bridge between the class hierarchies is achieved through composition.
+
+With the bridge pattern, the abstraction maintains a Has-A relationship with the implementation instead of a IS-A relationship
+
+Abstraction (Message): Is the interface implemented as an abstract class that clients communicates with.
+RefinedAbstraction (TextMessage and EmailMessage): Are classes that implement or extend Abstraction.
+Implementor (MessageSender): Is the interface of the implementation class hierarchy.
+ConcreteImplementor(TextMessageSender and EmailMessageSender): Are concrete subclasses that
+
+https://springframework.guru/gang-of-four-design-patterns/bridge-pattsern/
+
+Adapter VS Bridge
+
+The bridge pattern looks a lot like the adapter pattern and is a common cause of confusion. However, while the adapter pattern helps two incompatible interfaces work together,
+the bridge pattern helps decouple the abstraction and implementation by creating two separate class hierarchies
+

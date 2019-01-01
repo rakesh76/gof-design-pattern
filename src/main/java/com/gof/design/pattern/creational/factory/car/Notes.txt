@@ -1,0 +1,38 @@
+
+Factory Pattern:- Factory as name suggest, it's a place where we can create different product with similar features
+yet divide in categories.
+
+Usage:-
+
+1) if object creation is spread across application and if you need to change object creation process then
+   you need to go each and every place and make necessary change across application.
+
+2) This pattern introduce loose coupling between classes which is the most important feature we should consider
+   while designing the application architecture. Implement as abstract entities rather than concrete implementation
+
+3)  it will reduce lot of duplication of object creational logic across the client code
+
+4) define an interface or abstract class for creating an object but let the subclasses decide which class to instantiate.
+   In other words, subclasses are responsible to create the instance of the class
+
+5) This pattern take out the responsibility of instantiation of a class from client program to the factory class
+
+6) Factory Method in JDK
+    valudOf method which is there in String and wrapper class.
+    valueOf() method which returns object created by factory equivalent to value of parameter passed.
+    getInstance() method which creates instance of Singleton class.
+    java.util.Calendar#getInstance()
+   java.util.ResourceBundle#getBundle()
+    java.text.NumberFormat#getInstance()
+
+7) Car Example :-
+Building a car requires many steps from allocating accessories to final makeup. These steps can be written in
+programming as methods and should be called while creating an instance of a specific car type.
+
+If we are unfortunate then we will create instances of car types (e.g. SmallCar) in our application classes and
+thus we will expose the car building logic to outside world and this is certainly not good.
+It also prevents us in making changes to car making process because code in not centralized,
+and making changes in all composing classes seems not feasible.
+
+ http://howtodoinjava.com/design-patterns/creational/implementing-factory-design-pattern-in-java/
+ http://javarevisited.blogspot.com/2011/12/factory-design-pattern-java-example.html

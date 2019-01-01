@@ -1,0 +1,24 @@
+Factory Pattern :-
+
+Factory Method. Creates objects without specifying the exact class to create.
+
+So if you need to create instance of multiple objects of similar features, you can use Factory Method.
+
+In large scale enterprise  applications, the amount of code to create objects will gradually increase and will become scattered across the application, also
+asssuming if programmer has hard coded class name everywhere, it will be teadious process to refactor code. so Instread of using new keyword to create instance of your object
+better to create factory object.
+
+This pattern take out the responsibility of instantiation of a class from client program to the factory class
+
+User in Java API :-
+
+JDBC Connection Factory. You use factory class Connection while underlying connection can be from any database.
+
+
+The components of the factory method pattern in the context of the pizza store can be summarized as:
+
+Product (Pizza): Is an interface or an abstract class whose subclasses are instantiated by the factory method.
+ConcreteProduct (CheesePizza, PepperoniPizza, and VeggiePizza): Are the concrete subclasses that implement/extend Product. The factory method instantiates these subclasses.
+Creator (BasePizzaFactory): Is an interface or an abstract class that declares the factory method, which returns an object of type Product.
+ConcreteCreator (PizzaFactory): Is a concrete class that implements the factory method to create and return a ConcreteProduct to Client.
+Client: Asks the Creator for a Product.

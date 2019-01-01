@@ -1,0 +1,25 @@
+Prototype. Creates a new object from an existing object.
+
+
+A prototype is a template of any object before the actual object is constructed.
+In java also, it holds the same meaning. Prototype design pattern is used in scenarios
+where application needs to create a number of instances of a class, which has
+almost same state or differs very little.
+
+When to Use the Prototype Pattern
+
+1) If the creation of objects is complex or costly.
+2) If the addition or removal of objects is expected on runtime.
+3) If the client should be unaware of the object creation.
+4) If an object similar to the existing one is required.
+
+
+Most of the time you will not need to create copies of objects. But, as you move into enterprise application development where application performance is critical,
+you will encounter situations where construction of an object involves time consuming operations, such as network communication, database reads, and disk I/O.
+If a large number of such objects needs to be created, you can avoid repeating those steps for each object by initially creating a prototype and then making copies of it.
+
+
+Prototype (PrototypeCapableDocument): Is a Java interface or abstract class that defines the contract for classes that permits cloning of its objects.
+ConcretePrototype (TAndC and NDAgreement): Are classes that provide operations to clone its objects.
+PrototypeManager (DocumentPrototypeManager): A class that implements a registry to manage available prototypes for clients. On a client request, this class creates a copy of a prototype.
+Client: Asks the PrototypeManager for copies of prototypes.
